@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@import (reference) "../../styles/common";
+.app-aside{
+    width: @aside-width;
+    height:100px;
+    float: left;
+    background-color: @theme-bg-color !important;
+}
+.app-aside:before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: inherit;
+    background-color: inherit;
+    border: inherit;
+    content: "";
+}
+.aside-body{
+    .panel{
+        background-color: transparent !important;
+    }
+    .panel-default{
+        border: 0;
+    }
+    .panel-heading{
+        position: relative;
+        background-color: transparent !important;
+        border: 0;
+        height: 40px;
+        color: #B4B6BD;
+        .text-of();
+        .accorTitle{
+            width: 70%;
+            .text-of();
+        }
+        .accorIcon{
+            position: absolute;
+            top: 12px;
+            right: 10px;
+        }
+        a:focus{
+            outline: none;
+        }
+    }
+    .panel-heading:focus{
+        background-color: #2E3244;
+    }
+    .panel-heading:hover{
+        color: #F4F5F6;
+        background-color: #2E3344 !important;
+    }
+    .panel-body{
+        border-top: 0px !important;
+        background-color: #2E3244;
+        color: #B4B6BD;
+        .list-group{
+            width: 100%;
+            margin-bottom: 0px;
+            .list-group-item{
+                background-color: transparent;
+                border: 0px;
+            }
+        }
+    }
+}
+
